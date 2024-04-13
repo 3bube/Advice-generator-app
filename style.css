@@ -1,0 +1,129 @@
+:root {
+  --primary-100: hsl(193, 38%, 86%);
+  --primary-200: hsl(150, 100%, 66%);
+  --neutral-100: hsl(217, 19%, 38%);
+  --neutral-200: hsl(217, 19%, 24%);
+  --neutral-300: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  display: grid;
+  align-items: center;
+  place-items: center;
+  background-color: var(--neutral-300);
+  height: 100%;
+  width: 100vw;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 380px;
+}
+
+.advice-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--neutral-200);
+  padding: 40px 20px;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.card-heading {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary-200);
+  letter-spacing: 6px;
+}
+
+.text-box {
+  width: 100%;
+  line-height: 2.5rem;
+}
+
+.text-box p {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-100);
+}
+
+.divider,
+.divider-desktop {
+  width: 100%;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.divider-desktop {
+  display: none;
+}
+
+.dice {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-200);
+  transition: box-shadow 0.3s ease;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dice:hover {
+  box-shadow: 0 0 5px hsl(150, 100%, 66%), 0 0 25px hsl(150, 100%, 66%),
+    0 0 50px hsl(150, 100%, 66%), 0 0 200px hsl(150, 100%, 66%);
+}
+
+.dice img {
+  width: 30px;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    width: 600px;
+  }
+
+  .text-box {
+    width: 80%;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .divider-desktop {
+    width: 95%;
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+
+  .dice {
+    width: 70px;
+    height: 70px;
+  }
+
+  .dice img {
+    width: 25px;
+  }
+}
